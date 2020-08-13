@@ -1,0 +1,125 @@
+First draft
+
+// require('dotenv').config()
+// const express = require('express')
+// const morgan = require('morgan')
+// const cors = require('cors')
+// const helmet = require('helmet')
+// const { NODE_ENV } = require('./config')
+// const { v4: uuid } = require('uuid')
+
+// const app = express()
+
+// const morganOption = (NODE_ENV === 'production')
+//   ? 'tiny'
+//   : 'common';
+
+// app.use(morgan(morganOption))
+// app.use(cors())
+// app.use(helmet())
+// app.use(express.json())
+
+// function validateBearerToken(req, res, next){
+//   const apiToken = process.env.API_TOKEN;
+//   const authToken = req.get('authorisation')
+//   if(!authToken || authToken.split('')[1] !==apiToken){
+//     return res.status(401).json({error:'unauthorized request'})
+//   }
+//   next ();
+// }
+
+//  const address= [{
+//   "id": "3c8da4d5-1597-46e7-baa1-e402aed70d80",
+//   "firstName": "sallyStudent",
+//   "lastName": "c00d1ng1sc00l",
+//   "address1": "Cache Valley Stone Society",
+//   "address2": "false",
+//   "city": "yes",
+//   "state": "mhm",
+//   "zip": 12345
+
+// }]
+
+
+
+// 	app.get('/address', (req, res) => {
+// 		res.json(address); 
+// 	})
+
+  
+//   //   res.send('POST Request recieved');
+//   //    const data = {
+//   //     user: "username",
+//   //     pw: "password"
+//   //   };
+//   //   fetch('http://localhost: 8000/auth/login', {
+//   //     method: "POST",
+//   //     headers: {
+//   //       "Content-Type": "application/json"
+//   //     }
+//   //     body: JSON.stringify(date)
+//   //   })
+//   //   .then(...)
+//   // })
+
+//   app.delete('/address/addressId', validateBearerToken)
+
+
+// app.use(function errorHandler(error, req, res, next) {
+//    let response
+//    if (NODE_ENV === 'production') {
+//      response = { error: { message: 'server error' } }
+//    } else {
+//      console.error(error)
+//      response = { message: error.message, error }
+//    }
+//    res.status(500).json(response)
+// })
+
+
+
+
+
+
+
+// app.post('/address', validateBearerToken (req, res) => {
+
+//    const {firstName, lastName, address1, address2 = false, city, state, zip}=req.body;
+ 
+
+
+// const id = uuid();
+// const newAddress = {
+//     id,
+//     firstName,
+//     lastName,
+//     address1,
+//     address2,
+//     city,
+//     state,
+//     zip
+
+//   }
+
+// address.push(newAddress);
+// res
+// .status(200)
+// .location(`http://localhost:8000/address/${id}`)
+// .send('You did that right. So proud of you')
+
+//   app.delete('/adress/:id', (req, res) => {
+//   const { userId } = req.params;
+
+//   const index = address.findIndex(u => address.id === id);
+//   if (index === -1) {
+//     return res
+//       .status(404)
+//       .end();
+//   }
+
+//   address.splice(index, 1);
+
+//   res.send('Deleted');
+// });
+
+// module.exports = app
